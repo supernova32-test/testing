@@ -1,5 +1,14 @@
 {
-  "test": [
-    "bundle exec rspec"
-  ]
+  "image": "ruby:latest",
+  "services": [
+    "postgres:latest"
+  ],
+  
+  "rspec": {
+    "stage": "test",
+    "tags": ["ruby", "postgres"],
+    "script": [
+      "bundle exec rspec"
+    ]
+  }
 }
